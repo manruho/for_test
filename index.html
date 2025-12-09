@@ -273,7 +273,7 @@
         const inlineEl = document.getElementById("visitorCountText");
         const statusEl = document.getElementById("visitorStatus");
         const VISITOR_API = "https://visitor.6developer.com/visit";
-        const domainMeta = document.querySelector('meta[name="visitor-domain"]');
+        const domainMeta = document.querySelector('meta[name="manruho.github.io/for_test/"]');
         const detectedDomain = (domainMeta && domainMeta.content.trim()) || window.location.hostname || "localhost";
         const domain = detectedDomain.toLowerCase();
         const cacheKey = `visitor_count:${domain}`;
