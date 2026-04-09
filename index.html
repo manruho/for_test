@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="visitor-domain" content="monruho.github.io" />
+    <meta name="visitor-domain" content="monruho.github.io/for_test" />
     <title>学術オリンピック研究会 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -284,8 +284,11 @@
         const inlineEl = document.getElementById("visitorCountText");
         const statusEl = document.getElementById("visitorStatus");
         const VISITOR_API = "https://visitor.6developer.com/visit";
-        const domainMeta = document.querySelector('meta[name="manruho.github.io/for_test/"]');
-        const detectedDomain = (domainMeta && domainMeta.content.trim()) || window.location.hostname || "localhost";
+        const domainMeta = document.querySelector('meta[name="visitor-domain"]');
+        const detectedDomain =
+          (domainMeta && domainMeta.content.trim()) ||
+          `${window.location.hostname}${window.location.pathname}` ||
+          "localhost";
         const domain = detectedDomain.toLowerCase();
         const cacheKey = `visitor_count:${domain}`;
         const DISPLAY_OFFSET = 30;
